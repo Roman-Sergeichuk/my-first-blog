@@ -93,6 +93,5 @@ def comment_remove(request, pk):
 
 
 def comment_message(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
-    post = get_object_or_404(Post, pk=comment.post.pk)
+    post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/comment_message.html', {'post': post})
