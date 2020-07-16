@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<p>Ваш комментарий отпрвлен на модерацию.</p>
+<form action="{% url 'post_detail' pk=post.pk %}">
+   <button>Продолжить</button>
+  </form>
+{% endblock %}
